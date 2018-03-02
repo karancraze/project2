@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 model = load_model('mnist_97.h5')
 model.load_weights('mnist_97_weights.h5')
 
+model.summary()
 
 def load_image(img_path, show=True):
     img = image.load_img(img_path, target_size=(28, 28))
@@ -17,7 +18,12 @@ def load_image(img_path, show=True):
 
 
 img_path = '3.png'
-img = load_image(img_path)
+img_path2 = '2.png'
+img_path3 = '7.png'
 
-pred = model.predict(img)
-pred
+img = load_image(img_path)
+img = load_image(img_path2)
+img = load_image(img_path3)
+
+pred = []
+pred.append(model.predict(img))
