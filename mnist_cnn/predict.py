@@ -16,14 +16,7 @@ def load_image(img_path, show=True):
     img = np.reshape(img,[1,28,28,1])
     return img
 
-
-img_path = '3.png'
-img_path2 = '2.png'
-img_path3 = '7.png'
-
-img = load_image(img_path)
-img = load_image(img_path2)
-img = load_image(img_path3)
+img = load_image('3.png')
 
 pred = []
 pred.append(model.predict(img))
