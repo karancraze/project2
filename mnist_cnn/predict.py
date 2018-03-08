@@ -4,8 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-model = load_model('mnist_97.h5')
-model.load_weights('mnist_97_weights.h5')
+model = load_model('mnist.h5')
+model.load_weights('mnist_weights.h5')
 
 model.summary()
 
@@ -16,7 +16,13 @@ def load_image(img_path, show=True):
     img = np.reshape(img,[1,28,28,1])
     return img
 
+predictions = []
+
 img = load_image('3.png')
 
-pred = []
-pred.append(model.predict(img))
+pred = model.predict(img)
+
+
+for x in range(0,10):
+    if pred.item(x) == 1.0:
+        predictions.append(x)

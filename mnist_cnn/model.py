@@ -1,9 +1,9 @@
 import idx2numpy
 
-x_train = idx2numpy.convert_from_file('train-images.idx3-ubyte')
-y_train = idx2numpy.convert_from_file('train-labels.idx1-ubyte')
-x_test = idx2numpy.convert_from_file('t10k-images.idx3-ubyte')
-y_test = idx2numpy.convert_from_file('t10k-labels.idx1-ubyte')
+x_train = idx2numpy.convert_from_file('dataset/train-images.idx3-ubyte')
+y_train = idx2numpy.convert_from_file('dataset/train-labels.idx1-ubyte')
+x_test = idx2numpy.convert_from_file('dataset/t10k-images.idx3-ubyte')
+y_test = idx2numpy.convert_from_file('dataset/t10k-labels.idx1-ubyte')
 
 '''
 for x in range(10):
